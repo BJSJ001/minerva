@@ -603,7 +603,7 @@ function runAnimation(){
     if(glowEl) glowEl.style.animationDelay = (BLOOM_START/1000) + 's';
 
     const bgHearts = document.getElementById('bg-hearts');
-    const heartChars = ['❤','💕','💖','♥'];
+    const heartChars = ['❀','✿','❀','✿'];
     const bgFragment = document.createDocumentFragment();
     for(let n=0;n<22;n++){
       const h = document.createElement('div');
@@ -630,7 +630,7 @@ function runAnimation(){
     bgHearts.appendChild(bgFragment);
 
     const heartsWrap = document.getElementById('hearts');
-    const treeColors = ['#8b0000','#a4133c','#c9184a','#e63946','#e63946','#ff4d6d','#ff4d6d','#ff8fa3','#ff8fa3','#ffccd5','#fff0f3'];
+    const treeColors = ['#ff8fab','#ffa6c1','#ffb7c5','#ffc8d6','#ffc8d6','#ffd9e3','#ffd9e3','#f8c8dc','#fff0f5','#ffffff','#ffffff'];
     const N = 350;
     const CX = 75, CY = 78, SCALE = 5.4;
     const heartsFragment = document.createDocumentFragment();
@@ -645,7 +645,7 @@ function runAnimation(){
 
       const pt = document.createElement('div');
       pt.className = 'heart-pt';
-      pt.textContent = '♥';
+      pt.textContent = '❀';
       pt.style.left = px + 'px';
       pt.style.top = py + 'px';
       pt.style.color = color;
@@ -662,7 +662,7 @@ function runAnimation(){
       if(petalsWrap.children.length >= 14) return;
       const p = document.createElement('div');
       p.className = 'petal';
-      p.textContent = Math.random() > 0.5 ? '♥' : '❀';
+      p.textContent = Math.random() > 0.5 ? '❀' : '✿';
       p.style.left = Math.random()*100 + '%';
       const duration = 3 + Math.random()*3;
       p.style.animationDuration = duration + 's';
